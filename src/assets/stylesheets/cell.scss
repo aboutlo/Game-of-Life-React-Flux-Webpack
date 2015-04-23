@@ -1,0 +1,19 @@
+//.cell
+//  width: 25px
+//  height: 25px
+//  background: red
+
+.cell--alive {
+  width: 10px;
+  height: 10px;
+  background: black;
+}
+
+.cell--dead {
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+
+
+
