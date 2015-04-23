@@ -34,15 +34,16 @@ const Board = React.createClass({
   },
 
   render () {
+      //FIXME ugly change board rendering (key generation and create row component)
       var cells = _.clone(this.state.cells);
-
       var rows = [];
+      var key = 0;
       while( cells.length > 0 ){
         var columns = cells.splice(0,this.props.rows);
         columns = columns.map(cell => {
-          return <Cell cell={cell}/>
+          return <Cell key={key++} cell={cell}/>
         } );
-        rows.push(<tr>{columns}</tr>)
+        rows.push(<tr key={key++}>{columns}</tr>)
       }
 
       return (<table className="board">{rows}</table>);
